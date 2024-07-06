@@ -14,6 +14,7 @@ public class MerchantsWay {
         boolean validInputCalc = false;
         double saveMoney;
         int currencyNumberB;
+        boolean stopLoop = false;
 
 
         System.out.println("""
@@ -63,9 +64,9 @@ public class MerchantsWay {
         }
 
         System.out.println("""
-                    ╔═════════════════════════════════════════════════════════════════════════════╗
-                    ║  ░▒▓ These are the exchange rates for the money that you have on hand! ▓▒░  ║
-                    ╚═════════════════════════════════════════════════════════════════════════════╝
+                    ╔════════════════════════════════════════════════════════════════════════════════╗
+                    ║ ░▒▓ These are the exchange 1-1 rates for the money that you have on hand! ▓▒░  ║
+                    ╚════════════════════════════════════════════════════════════════════════════════╝
                 """);
 
 
@@ -95,47 +96,56 @@ public class MerchantsWay {
                     ╚═════════════════════════════════════════════════════════════════════════════╝
                 """);
 
-        doYouWannaCalc = Integer.parseInt(read.nextLine());
-
         while (!validInputCalc) {
+
             try {
+                doYouWannaCalc = Integer.parseInt(read.nextLine());
 
                 if (doYouWannaCalc == 1) {
 
                     System.out.println("""
-                                ╔═════════════════════════════════════════════════════════════════════════════╗
-                                ║  ░▒▓    - CHOOSE THE NUMBER CORRESPONDING TO THE COUNTER CURRENCY -    ▓▒░  ║
-                                ╚═════════════════════════════════════════════════════════════════════════════╝
-                            """);
+                                        ╔═════════════════════════════════════════════════════════════════════════════╗
+                                        ║  ░▒▓    - CHOOSE THE NUMBER CORRESPONDING TO THE COUNTER CURRENCY -    ▓▒░  ║
+                                        ╚═════════════════════════════════════════════════════════════════════════════╝
+                                    """);
 
-                    currencyNumberB = Integer.parseInt(read.nextLine());
+                    while (!stopLoop) {
+                        try {
+
+                            currencyNumberB = Integer.parseInt(read.nextLine());
 
 
-                    if (currencyNumberB >= 1 && currencyNumberB <= currenciesList.size() &&
-                            currencyNumberB != currencyNumberA) {
-                        System.out.println("You have chosen " + currenciesList.get(currencyNumberB - 1) + "!");
+                            if (currencyNumberB >= 1 && currencyNumberB <= currenciesList.size() &&
+                                    currencyNumberB != currencyNumberA) {
+                                System.out.println("You have chosen " + currenciesList.get(currencyNumberB - 1) + "!");
 
-                        System.out.println(
-                                "Tell me, how many " + currenciesList.get(currencyNumberA - 1) + " do you have?"
-                        );
-                        saveMoney = Double.parseDouble(read.nextLine());
+                                System.out.println(
+                                        "Tell me, how many " + currenciesList.get(currencyNumberA - 1) + " do you have?"
+                                );
+                                saveMoney = Double.parseDouble(read.nextLine());
 
-                        TotalExchangeCalculator calcAmount = new TotalExchangeCalculator();
-                        double totalAmount = calcAmount.calculator(
-                                saveMoney, merchantPrices.conversion_rates().get(currenciesList.get(currencyNumberB - 1))
-                        );
-                        System.out.println("You have " + totalAmount + " " +
-                                currenciesList.get(currencyNumberB - 1) + ". Pick up some rare things on sale, stranger!");
-                        validInputCalc = true;
-                    } else {
-                        System.out.println("""
-                                    ╔═════════════════════════════════════════════════════════════════════════════╗
-                                    ║  ░▒▓  - BE SMART, STRANGER! YOU NEED CHOOSE A VALID CURRENCY NUMBER    ▓▒░  ║
-                                    ║  ░▒▓                  AND DIFFERENT FROM THE PRIMARY -                 ▓▒░  ║
-                                    ╚═════════════════════════════════════════════════════════════════════════════╝
-                                """);
+                                TotalExchangeCalculator calcAmount = new TotalExchangeCalculator();
+                                double totalAmount = calcAmount.calculator(
+                                        saveMoney, merchantPrices.conversion_rates().get(currenciesList.get(currencyNumberB - 1))
+                                );
+                                System.out.println("You have " + totalAmount + " " +
+                                        currenciesList.get(currencyNumberB - 1) + ". Pick up some rare things on sale, stranger!");
+                                stopLoop = true;
+                            } else {
+                                System.out.println("""
+                                            ╔═════════════════════════════════════════════════════════════════════════════╗
+                                            ║  ░▒▓  - BE SMART, STRANGER! YOU NEED CHOOSE A VALID CURRENCY NUMBER    ▓▒░  ║
+                                            ║  ░▒▓                  AND DIFFERENT FROM THE PRIMARY -                 ▓▒░  ║
+                                            ╚═════════════════════════════════════════════════════════════════════════════╝
+                                        """);
 
+                            }
+
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please, enter a number.");
+                        }
                     }
+                    validInputCalc = true;
 
                 } else if (doYouWannaCalc == 2) {
                     System.out.println("Come back anytime, stranger.");

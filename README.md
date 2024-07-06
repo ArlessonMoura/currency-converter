@@ -6,7 +6,7 @@
 
 This project implements a currency exchange rate query system with real-time data and value conversion calculation. The system provides a simple console interaction and two query modes:
 - Quick mode, for users needing essential information only.
-- Complete mode, for users wanting comprehensive information beyond the basics.
+- Complete mode, for users that knows FOREX acronyms wanting information beyond the basics.
 
 ## Key Features
 
