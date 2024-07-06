@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c2da91d-69cd-4833-81e1-2c5df136d93e" name="Changes" comment="Sorry for a giant hell commit, but I can explain it.">
-      <change afterPath="$PROJECT_DIR$/src/BeginnersWay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExchangeRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExchangeRateList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HttpServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MerchantsWay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TotalExchangeCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Currency-Converter-Challenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Currency-Converter-Challenge.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +87,15 @@
       <option name="presentableId" value="Default" />
       <updated>1719966525282</updated>
     </task>
+    <task id="LOCAL-00001" summary="Sorry for a giant hell commit, but I can explain it.">
+      <option name="closed" value="true" />
+      <created>1720237680611</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720237680611</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
