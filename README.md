@@ -1,38 +1,39 @@
-<p align="center">
+<p>
   <img src="./src/assets/Template+ONE+Aluno+Back+END_PT+v3.png" alt="ONE BANNER">
 </p>
 
 # Currency Exchange System
 
-Este projeto implementa um sistema de troca de moedas que permite aos usuários consultar taxas de câmbio, realizar conversões monetárias e calcular valores em diferentes moedas estrangeiras. O sistema é projetado para atender tanto usuários iniciantes quanto especializados, oferecendo uma interface intuitiva e funcionalidades robustas.
+This project implements a currency exchange rate query system with real-time data and value conversion calculation. The system provides a simple console interaction and two query modes:
+- Quick mode, for users needing essential information only.
+- Complete mode, for users wanting comprehensive information beyond the basics.
 
-## Funcionalidades Principais
+## Key Features
 
-- **Modo Iniciante:** Permite aos usuários escolher duas moedas e calcular a taxa de câmbio entre elas.
-- **Modo Especialista:** Oferece uma gama mais ampla de funcionalidades, incluindo a visualização de taxas de câmbio detalhadas e cálculos avançados de conversão monetária.
-- **Integração com API Externa:** Utiliza a API de taxa de câmbio para obter dados atualizados em tempo real.
-- **Exibição Gráfica de Dados:** Apresenta as taxas de câmbio e opções de moedas em uma interface gráfica amigável.
+- **Beginner Mode:** Allows users to choose two currencies from a set of 7 predefined currencies, calculate the exchange rate between them, and perform currency conversions if needed.
+- **Expert Mode:** Offers access to 162 different exchange rates, providing extensive currency information and conversion calculations.
+- **Integration with External API:** Uses a currency exchange rate API to fetch updated data in real-time.
+- **Graphical Data Display:** Simple yet human-friendly interface, ensuring good user experience.
 
-## Componentes Principais
+## Main Components
 
-- **Main:** Controla o fluxo principal do programa, permitindo aos usuários escolher entre os modos Iniciante e Especialista.
-- **MerchantsWay:** Fornece funcionalidades avançadas para especialistas, como visualização detalhada de taxas de câmbio e cálculos precisos de conversão.
-- **BeginnersWay:** Projetado para usuários iniciantes, oferece uma interface simplificada para consulta de taxas de câmbio e cálculos básicos.
+- **Main:** Controls the main program flow, allowing users to choose between Beginner and Expert modes.
+- **MerchantsWay:** Manages dynamic requests and full availability of data.
+- **BeginnersWay:** Handles restricted requests with a predefined set of options.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Java:** Linguagem de programação utilizada para desenvolver a lógica de negócios e a interação com o usuário.
-- **HTTP Client:** Utilizado para realizar chamadas à API de taxa de câmbio e obter dados atualizados.
-- **Gson:** Biblioteca para serialização e desserialização de objetos JSON, utilizada para interpretar os dados da API.
+- **Java:** Programming language used for business logic and user interaction.
+- **HTTP Client:** Used to make calls to the currency exchange rate API and fetch updated data.
+- **Gson:** JSON serialization/deserialization library used to parse API data.
 
-## Como Utilizar
+## How to Use
 
-1. **Clone o Repositório:** `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
-2. **Compile o Código:** `javac Main.java`
-3. **Execute o Programa:** `java Main`
-4. **Siga as Instruções na Interface de Texto:** Escolha o modo (Iniciante ou Especialista) e siga as instruções para consultar e calcular taxas de câmbio.
+1. **Clone the Repository:** `git clone https://github.com/your-username/repository-name.git`
+2. **Compile the Code:** `javac Main.java`
+3. **Run the Program:** `java Main`
+4. **Follow Instructions in the Text Interface:** Choose the mode (Beginner or Expert) and follow instructions to query and calculate exchange rates.
 
-## Contribuições
+## Contributions
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request com melhorias ou correções de bugs.
-
+Contributions are welcome! Feel free to open a pull request with improvements or bug fixes.
